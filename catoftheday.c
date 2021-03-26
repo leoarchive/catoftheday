@@ -65,7 +65,7 @@ int main() {
     while(!feof(links)) {
         fgets(strInputLink, BUFSIZ, links);
         contLink++;
-        if (contLink == numberOfLinks) {
+        if (contLink == (numberOfLinks + 1)) {
             rewind(links);
             contStrLinkReadme = 0;
             contLink = 0;
