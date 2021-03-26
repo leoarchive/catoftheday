@@ -3,6 +3,12 @@
 #include <string.h>
 
 int main() {
+    char a;
+    printf("atualizar gatinho do dia??? (y/n)\n");
+    scanf("%c", &a);
+    if (a == 'n')
+        return 0;
+
     char strInputLink[BUFSIZ];
     char inputReadme[BUFSIZ];
     char strLinkReadme[BUFSIZ];
@@ -27,7 +33,7 @@ int main() {
 
     while(!feof(README)) {
         fgets(inputReadme, BUFSIZ, README);
-        if (inputReadme[2] == '`')
+        if (inputReadme[2] == '`' || inputReadme[2] == ' ')
             continue;
 
         size_t beforeLink;
@@ -69,7 +75,7 @@ int main() {
     }
 
     README = fopen("README.md", "w");
-    fprintf(README, "``` hello, welcome to my github ```\n");
+    fprintf(README, "``` hello, welcome to my github ```\n\n");
     fprintf(README, "![%d](%s)", contLink, strInputLink);
 
     printf("new (%d): %s", contLink, strInputLink);
