@@ -76,5 +76,8 @@ int main() {
 
     fclose(links);
     fclose(README);
+    system("git add README.md");
+    system("git commit -m \"gatinho do dia\"");
+    system("git push");
     return 0;
 }
