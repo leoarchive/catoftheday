@@ -9,8 +9,6 @@ rating = 'g'
 fmt = 'json'
 
 try:
-    api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
-
     while True:
         api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
         print("novo gatinho: " + api_response.data.image_url)
