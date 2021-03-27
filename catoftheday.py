@@ -23,6 +23,7 @@ try:
     f.write("``` hello, welcome to my github ```")
     f.write("\n\n")
     f.write("![gatinho](" + api_response.data.image_url + ")")
+    f.close()
 
     os.system("git add README.md")
     os.system("git commit -m \"gatinho do dia\"")
