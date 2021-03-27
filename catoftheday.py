@@ -13,7 +13,7 @@ try:
 
     while True:
         api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
-        print("novo gatinho: " + api_response.data.url)
+        print("novo gatinho: " + api_response.data.image_url)
         print("confirmar? s/n")
         i = input()
         if i == "s":
