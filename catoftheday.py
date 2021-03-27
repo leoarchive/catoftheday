@@ -4,8 +4,8 @@ from giphy_client.rest import ApiException
 
 api_instance = giphy_client.DefaultApi()
 api_key = 'KBoPq5N3OWxzlOmgRe6LyncvFwFETpLr'
-tag = 'cute cat'
-rating = 'r'
+tag = 'cat cute'
+rating = 'g'
 fmt = 'json'
 
 try:
@@ -13,7 +13,7 @@ try:
 
     while True:
         api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
-        print("novo gatinho: " + api_response.data.image_url)
+        print("novo gatinho: " + api_response.data.url)
         print("confirmar? s/n")
         i = input()
         if i == "s":
