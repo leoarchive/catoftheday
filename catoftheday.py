@@ -9,14 +9,8 @@ rating = 'g'
 fmt = 'json'
 
 try:
-    while True:
-        api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
-        print("novo gatinho: " + api_response.data.image_url)
-        print("confirmar? s/n")
-        i = input()
-        if i == "s":
-            break
-
+    api_response = api_instance.gifs_random_get(api_key, tag=tag, rating=rating, fmt=fmt)
+     
     f = open('README.md', 'w')
     f.write("``` hello, welcome to my github ```")
     f.write("\n\n")
