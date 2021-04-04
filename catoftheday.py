@@ -4,7 +4,7 @@ from giphy_client.rest import ApiException
 
 api_instance = giphy_client.DefaultApi()
 api_key = 'KBoPq5N3OWxzlOmgRe6LyncvFwFETpLr'
-tag = 'dog cute'
+tag = 'cat cute'
 rating = 'g'
 fmt = 'json'
 
@@ -14,11 +14,11 @@ try:
     f = open('README.md', 'w')
     f.write("``` hello, welcome to my github ```")
     f.write("\n\n")
-    f.write("![doguinho](" + api_response.data.image_url + ")")
+    f.write("![gatinho](" + api_response.data.image_url + ")")
     f.close()
 
     os.system("git add README.md")
-    os.system("git commit -m \"doguinho do dia\"")
+    os.system("git commit -m \"gatinho do dia\"")
     os.system("git push")
 except ApiException as e:
     print("Exception when calling DefaultApi->gifs_random_get: %s\n" % e)
